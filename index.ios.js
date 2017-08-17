@@ -13,6 +13,7 @@ import {
   NativeModules,
   TouchableOpacity,
 } from 'react-native'
+import Map from './Map'
 
 export default class rnDemo extends Component {
   callNativeMethod() {
@@ -38,6 +39,12 @@ export default class rnDemo extends Component {
             Cmd+D or shake for dev menu
           </Text>
         </TouchableOpacity>
+        <Map
+          style={styles.map}
+          pitchEnabled={false}
+          scrollEnabled={false}
+          isNormal={true}
+        />
 
       </View>
     )

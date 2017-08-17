@@ -34,8 +34,9 @@
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		BDF00B4B1F44AC2500BBF72E /* RNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B4A1F44AC2500BBF72E /* RNManager.swift */; };
-		BDF00B731F44ADD200BBF72E /* RNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B721F44ADD200BBF72E /* RNManager.m */; };
+		BD6115951F45EE120099AE56 /* RNMapBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6115941F45EE120099AE56 /* RNMapBridge.m */; };
+		BD6115971F45EE990099AE56 /* RNMapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6115961F45EE990099AE56 /* RNMapManager.swift */; };
+		BD6115991F45EEC90099AE56 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6115981F45EEC90099AE56 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,9 +254,11 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		BDF00B491F44AC2400BBF72E /* rnDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rnDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		BDF00B4A1F44AC2500BBF72E /* RNManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNManager.swift; sourceTree = "<group>"; };
-		BDF00B721F44ADD200BBF72E /* RNManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNManager.m; sourceTree = "<group>"; };
+		BD6115931F45EE120099AE56 /* RNMapBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMapBridge.h; sourceTree = "<group>"; };
+		BD6115941F45EE120099AE56 /* RNMapBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMapBridge.m; sourceTree = "<group>"; };
+		BD6115961F45EE990099AE56 /* RNMapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNMapManager.swift; sourceTree = "<group>"; };
+		BD6115981F45EEC90099AE56 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BD61159C1F45F06B0099AE56 /* rnDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "rnDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +383,7 @@
 		13B07FAE1A68108700A75B9A /* rnDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BD61158F1F45EDBE0099AE56 /* RNMap */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -387,9 +391,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				BDF00B4A1F44AC2500BBF72E /* RNManager.swift */,
-				BDF00B491F44AC2400BBF72E /* rnDemo-Bridging-Header.h */,
-				BDF00B721F44ADD200BBF72E /* RNManager.m */,
 			);
 			name = rnDemo;
 			sourceTree = "<group>";
@@ -475,6 +476,18 @@
 				2D02E4901E0B4A5D006451C7 /* rnDemo-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BD61158F1F45EDBE0099AE56 /* RNMap */ = {
+			isa = PBXGroup;
+			children = (
+				BD6115931F45EE120099AE56 /* RNMapBridge.h */,
+				BD61159C1F45F06B0099AE56 /* rnDemo-Bridging-Header.h */,
+				BD6115941F45EE120099AE56 /* RNMapBridge.m */,
+				BD6115961F45EE990099AE56 /* RNMapManager.swift */,
+				BD6115981F45EEC90099AE56 /* MapView.swift */,
+			);
+			name = RNMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -903,8 +916,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				BDF00B731F44ADD200BBF72E /* RNManager.m in Sources */,
-				BDF00B4B1F44AC2500BBF72E /* RNManager.swift in Sources */,
+				BD6115951F45EE120099AE56 /* RNMapBridge.m in Sources */,
+				BD6115991F45EEC90099AE56 /* MapView.swift in Sources */,
+				BD6115971F45EE990099AE56 /* RNMapManager.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
