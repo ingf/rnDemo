@@ -15,7 +15,7 @@
 
 @interface RCT_EXTERN_MODULE(RNMapManager, RCTViewManager)
 RCT_EXPORT_VIEW_PROPERTY(isNormal, BOOL)
-RCT_EXPORT_VIEW_PROPERTY(pitchEnabled, BOOL)
+
 
 @end
 
