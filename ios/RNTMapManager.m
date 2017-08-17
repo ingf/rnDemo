@@ -8,7 +8,8 @@
 
 // RNTMapManager.m
 #import <MapKit/MapKit.h>
-
+#import <React/RCTConvert.h>
+#import <React/RCTConvert+MapKit.h>
 #import <React/RCTViewManager.h>
 
 @interface RNTMapManager : RCTViewManager
@@ -18,8 +19,11 @@
 
 RCT_EXPORT_MODULE()
 RCT_EXPORT_VIEW_PROPERTY(pitchEnabled, BOOL)
+RCT_CUSTOM_VIEW_PROPERTY(region, MKCoordinateRegion, MKMapView)
 
-
+{
+  [view setRegion: json ? [RCTConvert MKCoordinateRegion:json] : defaultView.region animated:YES];
+}
 
 - (UIView *)view
 {
@@ -27,3 +31,4 @@ RCT_EXPORT_VIEW_PROPERTY(pitchEnabled, BOOL)
 }
 
 @end
+

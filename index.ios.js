@@ -10,6 +10,12 @@ import MapView from './MapView'
 
 export default class rnDemo extends Component {
   render() {
+    var region = {
+      latitude: 37.48,
+      longitude: -122.16,
+      latitudeDelta: 0.1,
+      longitudeDelta: 0.1,
+    }
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -22,7 +28,7 @@ export default class rnDemo extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
-        <MapView style={styles.map} pitchEnabled={false} />
+        <MapView style={styles.map} pitchEnabled={false} region={region} />
       </View>
     )
   }
