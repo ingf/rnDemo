@@ -9,6 +9,9 @@ import { AppRegistry, StyleSheet, Text, View } from 'react-native'
 import MapView from './MapView'
 
 export default class rnDemo extends Component {
+  onChange = event => {
+    console.log(event.nativeEvent.region)
+  }
   render() {
     var region = {
       latitude: 37.48,
@@ -28,7 +31,12 @@ export default class rnDemo extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
-        <MapView style={styles.map} pitchEnabled={false} region={region} />
+        <MapView
+          style={styles.map}
+          pitchEnabled={true}
+          region={region}
+          onChange={event => this.onChange(event)}
+        />
       </View>
     )
   }
