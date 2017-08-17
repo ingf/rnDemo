@@ -5,24 +5,47 @@
  */
 
 import React, { Component } from 'react'
-import { AppRegistry, StyleSheet, Text, View } from 'react-native'
-import MapView from './MapView'
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View,
+  NativeModules,
+  TouchableOpacity,
+} from 'react-native'
+import Map from './Map'
 
 export default class rnDemo extends Component {
+  callNativeMethod() {
+    var RNManager = NativeModules.RNManager
+    console.log(RNManager)
+    RNManager.testCall()
+  }
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-        <MapView style={styles.map} pitchEnabled={false} />
+
+        <TouchableOpacity
+          onPress={() => this.callNativeMethod()}
+          activeOpacity={0.5}>
+          <Text style={styles.welcome}>
+            Welcome to React Native!
+          </Text>
+          <Text style={styles.instructions}>
+            To get started, edit index.ios.js
+          </Text>
+          <Text style={styles.instructions}>
+            Press Cmd+R to reload,{'\n'}
+            Cmd+D or shake for dev menu
+          </Text>
+        </TouchableOpacity>
+        <Map
+          style={styles.map}
+          pitchEnabled={false}
+          scrollEnabled={false}
+          isNormal={true}
+        />
+
       </View>
     )
   }
