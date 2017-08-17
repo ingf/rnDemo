@@ -34,7 +34,8 @@
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		BDF00B481F44714300BBF72E /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B471F44714300BBF72E /* RNTMapManager.m */; };
+		BDF00B4B1F44AC2500BBF72E /* RNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B4A1F44AC2500BBF72E /* RNManager.swift */; };
+		BDF00B731F44ADD200BBF72E /* RNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B721F44ADD200BBF72E /* RNManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,8 +253,9 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		BDF00B461F44714300BBF72E /* RNTMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNTMapManager.h; sourceTree = "<group>"; };
-		BDF00B471F44714300BBF72E /* RNTMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTMapManager.m; sourceTree = "<group>"; };
+		BDF00B491F44AC2400BBF72E /* rnDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rnDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		BDF00B4A1F44AC2500BBF72E /* RNManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNManager.swift; sourceTree = "<group>"; };
+		BDF00B721F44ADD200BBF72E /* RNManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,7 +380,6 @@
 		13B07FAE1A68108700A75B9A /* rnDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BDF00B451F44712F00BBF72E /* RNTMapManager */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -386,6 +387,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				BDF00B4A1F44AC2500BBF72E /* RNManager.swift */,
+				BDF00B491F44AC2400BBF72E /* rnDemo-Bridging-Header.h */,
+				BDF00B721F44ADD200BBF72E /* RNManager.m */,
 			);
 			name = rnDemo;
 			sourceTree = "<group>";
@@ -471,15 +475,6 @@
 				2D02E4901E0B4A5D006451C7 /* rnDemo-tvOSTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		BDF00B451F44712F00BBF72E /* RNTMapManager */ = {
-			isa = PBXGroup;
-			children = (
-				BDF00B461F44714300BBF72E /* RNTMapManager.h */,
-				BDF00B471F44714300BBF72E /* RNTMapManager.m */,
-			);
-			name = RNTMapManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,6 +567,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = LMFCH2UZ5X;
+						LastSwiftMigration = 0830;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -907,7 +903,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				BDF00B481F44714300BBF72E /* RNTMapManager.m in Sources */,
+				BDF00B731F44ADD200BBF72E /* RNManager.m in Sources */,
+				BDF00B4B1F44AC2500BBF72E /* RNManager.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -959,6 +956,7 @@
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -979,6 +977,7 @@
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = rnDemoTests/Info.plist;
@@ -997,6 +996,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = LMFCH2UZ5X;
@@ -1008,6 +1008,9 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = rnDemo;
+				SWIFT_OBJC_BRIDGING_HEADER = "rnDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1016,6 +1019,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LMFCH2UZ5X;
 				INFOPLIST_FILE = rnDemo/Info.plist;
@@ -1026,6 +1030,8 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = rnDemo;
+				SWIFT_OBJC_BRIDGING_HEADER = "rnDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
