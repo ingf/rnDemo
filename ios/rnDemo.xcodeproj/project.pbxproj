@@ -35,6 +35,7 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		BD6115461F459B160099AE56 /* RNTMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6115451F459B160099AE56 /* RNTMap.m */; };
+		BD9153CF1F45FE3600A5D619 /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9153CE1F45FE3600A5D619 /* CalendarManager.m */; };
 		BDF00B481F44714300BBF72E /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B471F44714300BBF72E /* RNTMapManager.m */; };
 /* End PBXBuildFile section */
 
@@ -255,6 +256,8 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		BD6115441F459B160099AE56 /* RNTMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNTMap.h; sourceTree = "<group>"; };
 		BD6115451F459B160099AE56 /* RNTMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTMap.m; sourceTree = "<group>"; };
+		BD9153CD1F45FE3600A5D619 /* CalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarManager.h; sourceTree = "<group>"; };
+		BD9153CE1F45FE3600A5D619 /* CalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarManager.m; sourceTree = "<group>"; };
 		BDF00B461F44714300BBF72E /* RNTMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNTMapManager.h; sourceTree = "<group>"; };
 		BDF00B471F44714300BBF72E /* RNTMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTMapManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -381,6 +384,7 @@
 		13B07FAE1A68108700A75B9A /* rnDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BD9153B31F45FE0A00A5D619 /* CaledarManager */,
 				BDF00B451F44712F00BBF72E /* RNTMapManager */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -474,6 +478,15 @@
 				2D02E4901E0B4A5D006451C7 /* rnDemo-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BD9153B31F45FE0A00A5D619 /* CaledarManager */ = {
+			isa = PBXGroup;
+			children = (
+				BD9153CD1F45FE3600A5D619 /* CalendarManager.h */,
+				BD9153CE1F45FE3600A5D619 /* CalendarManager.m */,
+			);
+			name = CaledarManager;
 			sourceTree = "<group>";
 		};
 		BDF00B451F44712F00BBF72E /* RNTMapManager */ = {
@@ -911,6 +924,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9153CF1F45FE3600A5D619 /* CalendarManager.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				BD6115461F459B160099AE56 /* RNTMap.m in Sources */,
 				BDF00B481F44714300BBF72E /* RNTMapManager.m in Sources */,

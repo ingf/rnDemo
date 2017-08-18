@@ -7,10 +7,30 @@
 import React, { Component } from 'react'
 import { AppRegistry, StyleSheet, Text, View } from 'react-native'
 import MapView from './MapView'
+import { NativeModules, NativeEventEmitter } from 'react-native'
+var CalendarManager = NativeModules.CalendarManager
+
+CalendarManager.addEvent('Birthday Party', {
+  location: '4 Privet Drive, Surrey',
+  time: new Date().getTime(),
+  description: '...',
+})
+console.log(CalendarManager)
+console.log(CalendarManager.firstDayOfTheWeek)
+
+const calendarManagerEmitter = new NativeEventEmitter(CalendarManager)
+
+const subscription = calendarManagerEmitter.addListener(
+  'EventReminder',
+  reminder => console.log(reminder.name),
+)
 
 export default class rnDemo extends Component {
   onChange = event => {
     console.log(event.nativeEvent.region)
+  }
+  componentWillUnmount() {
+    subscription.remove()
   }
   render() {
     var region = {
