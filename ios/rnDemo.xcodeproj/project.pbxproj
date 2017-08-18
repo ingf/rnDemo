@@ -37,6 +37,8 @@
 		BD6115951F45EE120099AE56 /* RNMapBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6115941F45EE120099AE56 /* RNMapBridge.m */; };
 		BD6115971F45EE990099AE56 /* RNMapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6115961F45EE990099AE56 /* RNMapManager.swift */; };
 		BD6115991F45EEC90099AE56 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6115981F45EEC90099AE56 /* MapView.swift */; };
+		BD9153F61F4671BA00A5D619 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9153F51F4671BA00A5D619 /* CalendarManager.swift */; };
+		BD9153F91F46725200A5D619 /* CalendarManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9153F81F46725200A5D619 /* CalendarManagerBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +261,10 @@
 		BD6115961F45EE990099AE56 /* RNMapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNMapManager.swift; sourceTree = "<group>"; };
 		BD6115981F45EEC90099AE56 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		BD61159C1F45F06B0099AE56 /* rnDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "rnDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		BD9153F51F4671BA00A5D619 /* CalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		BD9153F71F46725200A5D619 /* CalendarManagerBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarManagerBridge.h; sourceTree = "<group>"; };
+		BD9153F81F46725200A5D619 /* CalendarManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarManagerBridge.m; sourceTree = "<group>"; };
+		BD9153FA1F4672D700A5D619 /* CalendarManager-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CalendarManager-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +389,7 @@
 		13B07FAE1A68108700A75B9A /* rnDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BD9153DB1F46719200A5D619 /* CalendarManager */,
 				BD61158F1F45EDBE0099AE56 /* RNMap */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -488,6 +495,17 @@
 				BD6115981F45EEC90099AE56 /* MapView.swift */,
 			);
 			name = RNMap;
+			sourceTree = "<group>";
+		};
+		BD9153DB1F46719200A5D619 /* CalendarManager */ = {
+			isa = PBXGroup;
+			children = (
+				BD9153F51F4671BA00A5D619 /* CalendarManager.swift */,
+				BD9153F71F46725200A5D619 /* CalendarManagerBridge.h */,
+				BD9153F81F46725200A5D619 /* CalendarManagerBridge.m */,
+				BD9153FA1F4672D700A5D619 /* CalendarManager-Bridging-Header.h */,
+			);
+			name = CalendarManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -918,8 +936,10 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				BD6115951F45EE120099AE56 /* RNMapBridge.m in Sources */,
 				BD6115991F45EEC90099AE56 /* MapView.swift in Sources */,
+				BD9153F61F4671BA00A5D619 /* CalendarManager.swift in Sources */,
 				BD6115971F45EE990099AE56 /* RNMapManager.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				BD9153F91F46725200A5D619 /* CalendarManagerBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
