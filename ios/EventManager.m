@@ -10,4 +10,26 @@
 
 @implementation EventManager
 
+- (instancetype)init
+{
+  self = [super init];
+  if (self) {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(calendarEventReminderReceived:) name:@"addBtn" object:nil];
+  }
+  return self;
+}
+
+RCT_EXPORT_MODULE();
+
+- (NSArray<NSString *> *)supportedEvents
+{
+  return @[@"EventReminder"];
+}
+
+- (void)calendarEventReminderReceived:(NSNotification *)notification
+{
+  [self sendEventWithName:@"EventReminder" body:@{@"name": @"xx"}];
+}
+
+
 @end

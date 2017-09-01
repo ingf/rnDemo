@@ -25,14 +25,4 @@ RCT_EXPORT_METHOD(addEvent:(NSString *)name details:(NSDictionary *)details)
   return @{ @"firstDayOfTheWeek": @"Monday" };
 }
 
-- (NSArray<NSString *> *)supportedEvents
-{
-  return @[@"EventReminder"];
-}
-
-- (void)calendarEventReminderReceived:(NSNotification *)notification
-{
-  NSString *eventName = notification.userInfo[@"name"];
-  [self sendEventWithName:@"EventReminder" body:@{@"name": eventName}];
-}
 @end

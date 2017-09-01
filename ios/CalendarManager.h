@@ -14,6 +14,8 @@
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventEmitter.h>
 
-@interface CalendarManager : RCTEventEmitter <RCTBridgeModule>
+@interface CalendarManager : NSObject <RCTBridgeModule>
+
+- (void)calendarEventReminderReceived:(NSNotification *)notification;
 
 @end
